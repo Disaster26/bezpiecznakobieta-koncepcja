@@ -1,0 +1,460 @@
+<!doctype html>
+<html lang="pl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Szkolenia z samoobrony dla kobiet "Sama się obronię" | Bezpieczna Kobieta</title>
+<meta name="description" content="Szkolenia z samoobrony i bezpieczeństwa osobistego dla kobiet prowadzone przez Grażynę Ferrę-Kopocińską: Warszawa, Gdańsk, Kraków, Poznań, Katowice, Wrocław, szkolenia firmowe i indywidualne.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="icon" href="img/piesc.webp" type="image/webp">
+<link rel="preload" href="fonts/poppins-latin-600.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="fonts/poppins-latin-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" as="image" href="img/hero-tel-1000.webp" imagesrcset="img/hero-tel-600.webp 600w, img/hero-tel-1000.webp 1000w, img/hero-tel-1300.webp 1300w" imagesizes="100vw" media="(max-width:760px)" fetchpriority="high">
+<link rel="preload" as="image" href="img/hero-1920.webp" imagesrcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w, img/hero-3200.webp 3200w" imagesizes="100vw" media="(min-width:761px)" fetchpriority="high">
+<style>
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(fonts/poppins-latin-400.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Poppins;font-weight:400;font-display:swap;src:url(fonts/poppins-latin-ext-400.woff2) format("woff2");unicode-range:U+0100-017F}
+@font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(fonts/poppins-latin-600.woff2) format("woff2");unicode-range:U+0000-00FF,U+2013-2026,U+20AC}
+@font-face{font-family:Poppins;font-weight:600;font-display:swap;src:url(fonts/poppins-latin-ext-600.woff2) format("woff2");unicode-range:U+0100-017F}
+:root{--zielen:#0A8E5E;--zielen-c:#0B3B2A;--pom:#F56A1E;--pom-c:#D9540E;--ink:#15201B;--ink2:#46514C;--szary:#EEF2F0;--linia:#D5DDD9;--head:68px;--pad:clamp(16px,4vw,56px);--max:1320px}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:var(--head)}
+body{margin:0;background:#fff;color:var(--ink);font:400 16.5px/1.65 Poppins,"Segoe UI",Arial,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit}
+h1,h2,h3{font-weight:600;line-height:1.15;margin:0;letter-spacing:-.015em}
+h2{font-size:clamp(28px,3.2vw,46px)}
+h3{font-size:19px}
+p{margin:0 0 1em}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 var(--pad)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;min-height:52px;padding:0 28px;border-radius:6px;background:var(--pom);color:#fff;font-weight:600;font-size:16px;text-decoration:none;border:0;cursor:pointer;transition:background .2s}
+.btn:hover{background:var(--pom-c)}
+.btn.ziel{background:var(--zielen)}
+.btn.ziel:hover{background:#087a50}
+/* znak strefy: okrąg z krzyżykiem jak w symbolu z logo */
+.strefa{display:inline-block;width:22px;height:30px;flex:0 0 auto;position:relative}
+.strefa::before{content:"";position:absolute;left:1px;top:0;width:20px;height:20px;border:2.5px solid currentColor;border-radius:50%;box-sizing:border-box}
+.strefa::after{content:"";position:absolute;left:10px;top:19px;width:2.5px;height:11px;background:currentColor;box-shadow:-4px 4px 0 -0px transparent}
+.strefa i{position:absolute;left:6px;top:24px;width:11px;height:2.5px;background:currentColor}
+
+/* nagłówek */
+.top{position:sticky;top:0;z-index:50;background:#fff;border-bottom:1px solid var(--linia)}
+.top .wrap{height:var(--head);display:flex;align-items:center;gap:28px;max-width:none}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;flex:0 0 auto}
+.logo img{width:52px;height:auto}
+.logo b{display:block;font-size:17px;line-height:1.1;font-weight:600}
+.logo span{display:block;font-size:12px;color:var(--ink2);line-height:1.2}
+.menu{display:flex;gap:26px;margin-left:auto;font-size:15px}
+.menu a{text-decoration:none;padding:6px 0;border-bottom:2px solid transparent}
+.menu a:hover{border-color:var(--pom)}
+.menu a.on{border-color:var(--zielen)}
+.tel{font-weight:600;text-decoration:none;white-space:nowrap;color:var(--zielen)}
+.koszyk{font-size:15px;text-decoration:none;white-space:nowrap;border:1.5px solid var(--linia);border-radius:6px;padding:7px 14px}
+.burger{display:none;margin-left:auto;width:46px;height:46px;border:0;background:none;cursor:pointer;padding:11px}
+.burger span{display:block;height:2.5px;background:var(--ink);margin:5px 0;border-radius:2px}
+@media (max-width:1180px){.menu,.koszyk{display:none}.burger{display:block}.tel{order:2}}
+@media (max-width:520px){.top .tel{display:none}.logo span{font-size:11px}}
+.panel{position:fixed;inset:var(--head) 0 0 0;background:#fff;z-index:49;padding:18px var(--pad) 32px;display:none;overflow:auto}
+.panel.otw{display:block}
+.panel a{display:block;font-size:21px;font-weight:600;text-decoration:none;padding:13px 0;border-bottom:1px solid var(--linia)}
+.panel .btn{display:flex;margin-top:24px;width:100%;border:0;color:#fff}
+.panel .ptel{color:var(--zielen)}
+
+/* pierwszy ekran */
+.hero{position:relative;min-height:calc(100svh - var(--head));display:flex;flex-direction:column;justify-content:flex-end;color:#fff;overflow:hidden;background:#3b2a1c}
+.hero picture,.hero picture img{position:absolute;inset:0;width:100%;height:100%}
+.hero picture img{object-fit:cover;object-position:58% 40%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(8,22,16,.82) 0%,rgba(8,22,16,.55) 38%,rgba(8,22,16,0) 66%),linear-gradient(0deg,rgba(8,22,16,.55),rgba(8,22,16,0) 45%)}
+.hero .wrap{position:relative;z-index:2;width:100%;max-width:none;padding-left:clamp(16px,5vw,96px);padding-top:48px;padding-bottom:clamp(40px,8vh,96px)}
+.hero h1{font-size:clamp(34px,3.6vw,62px);max-width:11.5em;text-wrap:balance}
+.hero .lead{font-size:clamp(17px,1.25vw,20px);max-width:31em;margin:20px 0 32px;color:#F2F5F3}
+.hero .akcje{display:flex;flex-wrap:wrap;align-items:center;gap:14px 26px}
+.hero .info{font-size:15px;color:#E3EAE6}
+.hero .info a{color:#fff;font-weight:600;text-decoration:none}
+@media (max-width:760px){
+ .hero{min-height:calc(100svh - var(--head))}
+ .hero picture img{object-position:50% 0}
+ .hero::after{background:linear-gradient(0deg,rgba(8,22,16,.94) 0%,rgba(8,22,16,.78) 40%,rgba(8,22,16,.15) 70%,rgba(8,22,16,0) 85%)}
+ .hero .wrap{padding-bottom:28px}
+ .hero h1{font-size:clamp(28px,8.4vw,38px)}
+ .hero .lead{font-size:16px;margin:14px 0 24px;line-height:1.55}
+ .hero .btn{width:100%}
+ .hero .info{display:none}
+}
+@media (max-width:760px) and (max-height:680px){.hero h1{font-size:27px}.hero .lead{font-size:15px;margin:10px 0 24px}}
+
+/* sekcje */
+section{padding:clamp(64px,8vw,112px) 0}
+.szary{background:var(--szary)}
+.naglowek{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:36px}
+.naglowek p{max-width:36em;color:var(--ink2);margin:14px 0 0}
+.strzalki{display:flex;gap:10px;flex:0 0 auto}
+.strzalki button{width:48px;height:48px;border-radius:50%;border:1.5px solid var(--ink);background:#fff;cursor:pointer;font:600 20px/1 Poppins,sans-serif;color:var(--ink)}
+.strzalki button:hover{background:var(--ink);color:#fff}
+@media (max-width:760px){.strzalki{display:none}.naglowek{display:block}}
+
+/* terminy */
+.pas{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(260px,300px);gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px var(--pad) 18px;margin:0 calc(-1 * var(--pad));scrollbar-width:thin;cursor:grab;scroll-padding:0 var(--pad)}
+.pas.ciag{cursor:grabbing;scroll-snap-type:none}
+.pas>*{scroll-snap-align:start}
+.termin{background:#fff;border:1px solid var(--linia);border-radius:10px;padding:24px 24px 22px;display:flex;flex-direction:column;min-height:330px;user-select:none}
+.termin .data{display:flex;align-items:center;gap:12px;color:var(--zielen)}
+.termin .data b{font-size:34px;line-height:1;color:var(--ink)}
+.termin .data small{display:block;font-size:14px;color:var(--ink2);line-height:1.3}
+.termin .miasto{font-size:24px;font-weight:600;margin:18px 0 6px;color:var(--zielen)}
+.termin .co{font-size:15.5px;margin:0 0 18px}
+.termin .cena{margin-top:auto;font-size:15px;color:var(--ink2);border-top:1px solid var(--linia);padding-top:14px;margin-bottom:16px}
+.termin .cena b{display:block;font-size:22px;color:var(--ink)}
+.termin .btn{min-height:46px;font-size:15px;width:100%}
+.termin.inny .miasto{color:var(--pom-c)}
+
+/* szkolenie */
+.dwie{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(0,1fr);gap:clamp(32px,5vw,80px);align-items:center}
+.dwie figure{margin:0;border-radius:10px;overflow:hidden;aspect-ratio:4/3}
+.dwie figure img{width:100%;height:100%;object-fit:cover}
+.lista{list-style:none;padding:0;margin:26px 0 0}
+.lista li{display:grid;grid-template-columns:30px minmax(0,1fr);gap:14px;padding:14px 0;border-top:1px solid var(--linia)}
+.lista li .strefa{color:var(--pom);margin-top:2px}
+.lista b{display:block;font-weight:600}
+.lista span.t{color:var(--ink2);font-size:15.5px}
+.dla{margin-top:24px;font-size:15px;color:var(--ink2)}
+@media (max-width:900px){.dwie{grid-template-columns:minmax(0,1fr)}}
+
+/* formy */
+.formy{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.forma{background:#fff;border-radius:10px;overflow:hidden;display:flex;flex-direction:column;text-decoration:none}
+.forma img{width:100%;aspect-ratio:4/3;object-fit:cover}
+.forma div{padding:20px 22px 24px;display:flex;flex-direction:column;flex:1}
+.forma p{font-size:15px;color:var(--ink2);margin:8px 0 14px}
+.forma .gdzie{margin-top:auto;font-size:14px;font-weight:600;color:var(--zielen)}
+@media (max-width:1100px){.formy{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:640px){.formy{grid-auto-flow:column;grid-template-columns:none;grid-auto-columns:80%;overflow-x:auto;scroll-snap-type:x mandatory;margin:0 calc(-1 * var(--pad));padding:0 var(--pad) 12px;scroll-padding:0 var(--pad)}.formy>*{scroll-snap-align:start}}
+
+/* galeria */
+.galeria{display:grid;grid-auto-flow:column;grid-auto-columns:auto;gap:12px;overflow-x:auto;scroll-snap-type:x mandatory;padding:0 var(--pad) 14px;margin:0 calc(-1 * var(--pad));cursor:grab}
+.galeria.ciag{cursor:grabbing;scroll-snap-type:none}
+.galeria img{height:clamp(260px,34vw,440px);width:auto;max-width:none;border-radius:8px;scroll-snap-align:start;user-select:none;-webkit-user-drag:none}
+
+/* opinie */
+.opinie{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.opinia{background:#fff;border-radius:10px;padding:28px 26px;margin:0;border-top:4px solid var(--zielen)}
+.opinia blockquote{margin:0 0 16px;font-size:16px}
+.opinia figcaption{font-size:14px;color:var(--ink2)}
+@media (max-width:980px){.opinie{grid-template-columns:minmax(0,1fr)}}
+
+/* o mnie */
+.ciemna{background:var(--zielen-c);color:#fff}
+.omnie{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(32px,6vw,96px);align-items:center}
+.omnie figure{margin:0;border-radius:10px;overflow:hidden;background:#d9dcdb;max-width:520px}
+.omnie p{color:#DCE7E1}
+.omnie h2{margin-bottom:22px}
+.omnie .cytat{font-size:clamp(19px,1.6vw,23px);color:#fff;border-left:3px solid var(--pom);padding-left:20px;margin:28px 0}
+.loga{display:flex;flex-wrap:wrap;gap:12px;margin-top:30px}
+.loga img{height:58px;width:auto;background:#fff;border-radius:6px;padding:8px 14px}
+.loga-t{font-size:14px;color:#BFD3C8;margin-top:28px}
+@media (max-width:900px){.omnie{grid-template-columns:minmax(0,1fr)}.omnie figure{max-width:420px}}
+
+/* sklep */
+.produkty{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.produkt{border:1px solid var(--linia);border-radius:10px;overflow:hidden;display:flex;flex-direction:column}
+.produkt img{width:100%;aspect-ratio:1/1;object-fit:cover;background:#fff}
+.produkt div{padding:18px 22px 22px;display:flex;flex-direction:column;flex:1;border-top:1px solid var(--linia)}
+.produkt h3{font-size:17px}
+.produkt .dop{font-size:14.5px;color:var(--ink2);margin:6px 0 16px}
+.produkt .dol{margin-top:auto;display:flex;align-items:center;justify-content:space-between;gap:12px}
+.produkt .dol b{font-size:22px}
+.produkt .btn{min-height:44px;padding:0 18px;font-size:14.5px}
+@media (max-width:980px){.produkty{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:600px){.produkty{gap:12px}.produkt div{padding:12px 12px 14px}.produkt h3{font-size:14.5px}.produkt .dop{display:none}.produkt .dol{flex-direction:column;align-items:stretch;gap:8px;margin-top:10px}.produkt .dol b{font-size:18px}.produkt .btn{min-height:40px;padding:0 10px;font-size:14px}}
+
+/* online i konsultacje */
+.oferta2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(24px,4vw,56px)}
+.oferta2 h3{font-size:22px;margin-bottom:10px}
+.cennik{list-style:none;margin:0;padding:0}
+.cennik li{display:flex;justify-content:space-between;gap:18px;padding:14px 0;border-top:1px solid var(--linia);font-size:15.5px}
+.cennik li b{white-space:nowrap}
+.cennik s{color:var(--ink2);font-weight:400;margin-right:6px}
+@media (max-width:820px){.oferta2{grid-template-columns:minmax(0,1fr)}}
+
+/* kontakt */
+.kontakt{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.1fr);gap:clamp(32px,5vw,80px)}
+.kanal{display:block;font-size:clamp(22px,2.2vw,30px);font-weight:600;text-decoration:none;color:var(--zielen);margin:6px 0}
+.kontakt .male{color:var(--ink2);font-size:15px}
+form{display:grid;gap:14px}
+label{font-size:14px;font-weight:600;display:grid;gap:6px}
+input,select,textarea{font:inherit;font-size:16px;padding:13px 14px;border:1.5px solid var(--linia);border-radius:6px;background:#fff;width:100%}
+textarea{min-height:120px;resize:vertical}
+input:focus,select:focus,textarea:focus{outline:2px solid var(--zielen);border-color:transparent}
+.zgoda{display:flex;gap:10px;font-weight:400;font-size:13.5px;color:var(--ink2);align-items:flex-start}
+.zgoda input{width:auto;margin-top:4px}
+form .btn{justify-self:start}
+.uwaga{font-size:13px;color:var(--ink2)}
+@media (max-width:900px){.kontakt{grid-template-columns:minmax(0,1fr)}form .btn{width:100%}}
+
+/* stopka */
+footer{background:#0A1F17;color:#C9D6CF;padding:56px 0 28px;font-size:15px}
+.stopka{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+footer h4{color:#fff;font-size:15px;margin:0 0 12px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+footer ul{list-style:none;margin:0;padding:0;display:grid;gap:7px}
+.dolstopki{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;border-top:1px solid rgba(255,255,255,.12);margin-top:40px;padding-top:20px;font-size:13.5px}
+@media (max-width:900px){.stopka{grid-template-columns:1fr 1fr}.stopka>div:first-child{grid-column:1/-1}}
+
+.wylinka-badge{display:inline-flex;align-items:center;gap:.4em;color:inherit;text-decoration:none;font-size:.875em;line-height:1;opacity:.85}
+.wylinka-badge:hover,.wylinka-badge:focus-visible{opacity:1}
+.wylinka-badge:focus-visible{outline:2px solid currentColor;outline-offset:3px;border-radius:2px}
+.wylinka-badge svg{width:18px;height:18px;flex:none;overflow:visible}
+.wylinka-badge b{font-weight:600}
+.wylinka-badge .wy-old{opacity:.45;transform-origin:40px 30px;transition:transform .32s cubic-bezier(.3,.7,.4,1),opacity .32s ease-out}
+.wylinka-badge .wy-pod{opacity:0;transition:opacity .2s ease-out .08s}
+.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:translate(9px,7px) rotate(9deg);opacity:0}
+.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:1}
+@media (prefers-reduced-motion:reduce){.wylinka-badge .wy-old,.wylinka-badge .wy-pod{transition:none}.wylinka-badge:hover .wy-old,.wylinka-badge:focus-visible .wy-old{transform:none;opacity:.45}.wylinka-badge:hover .wy-pod,.wylinka-badge:focus-visible .wy-pod{opacity:0}}
+
+
+
+/* pasek na telefonie po przewinięciu */
+.mob{position:fixed;left:0;right:0;bottom:0;z-index:40;display:none;gap:10px;padding:10px 12px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--linia);transform:translateY(110%);transition:transform .25s}
+.mob a{flex:1;min-height:48px}
+.mob .btn.jasny{background:#fff;color:var(--zielen);border:1.5px solid var(--zielen)}
+@media (max-width:760px){.mob{display:flex}.mob.widac{transform:none}}
+</style>
+</head>
+<body>
+<header class="top">
+ <div class="wrap">
+  <a class="logo" href="#" aria-label="Bezpieczna Kobieta - strona główna"><img src="img/piesc.webp" width="240" height="192" alt="Logo Akademii Bezpiecznych Kobiet: pięść ze znakiem kobiety"><div><b>Bezpieczna Kobieta</b><span>Akademia Bezpiecznych Kobiet</span></div></a>
+  <nav class="menu" aria-label="Menu główne">
+   <a href="#" class="on">Start</a>
+   <a href="#terminy">Terminy szkoleń</a>
+   <a href="#formy">Dla firm</a>
+   <a href="#zestawy">Zestawy SAFE FAMILY</a>
+   <a href="#online">Online i konsultacje</a>
+   <a href="#o-mnie">O mnie</a>
+   <a href="#kontakt">Kontakt</a>
+  </nav>
+  <a class="tel" href="tel:+48730048199">730 048 199</a>
+  <a class="koszyk" href="#zestawy">Koszyk (0)</a>
+  <button class="burger" aria-label="Otwórz menu" aria-expanded="false" aria-controls="panel"><span></span><span></span><span></span></button>
+ </div>
+</header>
+<nav class="panel" id="panel" aria-label="Menu mobilne">
+ <a href="#terminy">Terminy szkoleń</a>
+ <a href="#formy">Szkolenia dla firm</a>
+ <a href="#zestawy">Zestawy SAFE FAMILY</a>
+ <a href="#online">Online i konsultacje</a>
+ <a href="#o-mnie">O mnie</a>
+ <a href="#kontakt">Kontakt</a>
+ <a class="ptel" href="tel:+48730048199">Zadzwoń: 730 048 199</a>
+ <a class="btn" href="#terminy">Wybierz termin szkolenia</a>
+</nav>
+
+<main>
+<section class="hero" style="padding:0">
+ <picture>
+  <source media="(max-width:760px)" srcset="img/hero-tel-600.webp 600w, img/hero-tel-1000.webp 1000w, img/hero-tel-1300.webp 1300w" sizes="100vw">
+  <img src="img/hero-1920.webp" srcset="img/hero-1280.webp 1280w, img/hero-1920.webp 1920w, img/hero-2560.webp 2560w, img/hero-3200.webp 3200w" sizes="100vw" width="1920" height="1280" alt="Grażyna Ferra-Kopocińska prowadzi ćwiczenie na warsztatach Sama się obronię, uczestniczki stoją w dwóch szeregach" fetchpriority="high">
+ </picture>
+ <div class="wrap">
+  <h1>Szkolenia z samoobrony dla kobiet. Sama się obronię.</h1>
+  <p class="lead">Praktyczne warsztaty z bezpieczeństwa osobistego: jak rozpoznać zagrożenie, zapanować nad stresem, postawić granicę i obronić się prostymi technikami. Prowadzi Grażyna Ferra-Kopocińska, przez 16 lat w służbie mundurowej.</p>
+  <div class="akcje">
+   <a class="btn" href="#terminy">Wybierz termin szkolenia</a>
+   <span class="info">Warszawa, Gdańsk, Kraków, Poznań, Katowice, Wrocław<br>i szkolenia u Ciebie: <a href="tel:+48730048199">730 048 199</a></span>
+  </div>
+ </div>
+</section>
+
+<section id="terminy">
+ <div class="wrap">
+  <div class="naglowek">
+   <div><h2>Najbliższe terminy szkoleń</h2><p>Miejsce rezerwujesz zadatkiem online, resztę płacisz w dniu szkolenia kartą lub BLIK-iem. Można też kupić voucher na prezent.</p></div>
+   <div class="strzalki"><button type="button" data-pas="p-terminy" data-k="-1" aria-label="Poprzednie terminy">&#8592;</button><button type="button" data-pas="p-terminy" data-k="1" aria-label="Następne terminy">&#8594;</button></div>
+  </div>
+  <div class="pas" id="p-terminy">
+   <article class="termin inny"><div class="data"><span class="strefa"><i></i></span><div><b>12.12</b><small>2026, sobota</small></div></div><div class="miasto">Warszawa</div><p class="co">Szkolenie "Bezpieczny facet" dla mężczyzn</p><div class="cena"><b>840 zł</b>zadatek 440 zł, 400 zł w dniu szkolenia</div><a class="btn ziel" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>13.12</b><small>2026, niedziela</small></div></div><div class="miasto">Warszawa</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>20.02</b><small>2027, sobota</small></div></div><div class="miasto">Warszawa</div><p class="co">"Sama się obronię" część II - siła i pewność siebie</p><div class="cena"><b>684 zł</b>dla uczestniczek części I</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>21.02</b><small>2027, niedziela</small></div></div><div class="miasto">Kraków</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>13.03</b><small>2027, sobota</small></div></div><div class="miasto">Gdańsk</div><p class="co">Warsztaty "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>14.03</b><small>2027, niedziela</small></div></div><div class="miasto">Gdańsk</div><p class="co">"Sama się obronię" część II - siła i pewność siebie</p><div class="cena"><b>684 zł</b>dla uczestniczek części I</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>10.04</b><small>2027, sobota</small></div></div><div class="miasto">Warszawa</div><p class="co">Warsztaty "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>18.09</b><small>2027, sobota</small></div></div><div class="miasto">Poznań</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>16.10</b><small>2027, sobota</small></div></div><div class="miasto">Katowice</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>20.11</b><small>2027, sobota</small></div></div><div class="miasto">Wrocław</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin"><div class="data"><span class="strefa"><i></i></span><div><b>11.12</b><small>2027, sobota</small></div></div><div class="miasto">Kraków</div><p class="co">Szkolenie "Sama się obronię"</p><div class="cena"><b>924 zł</b>zadatek 524 zł, 400 zł w dniu szkolenia</div><a class="btn" href="#kontakt">Rezerwuję miejsce</a></article>
+   <article class="termin inny"><div class="data"><span class="strefa"><i></i></span><div><b>Voucher</b><small>na dowolny termin</small></div></div><div class="miasto">Na prezent</div><p class="co">Voucher podarunkowy na warsztaty "Sama się obronię"</p><div class="cena"><b>924 zł</b>pełna kwota szkolenia</div><a class="btn ziel" href="#kontakt">Kupuję voucher</a></article>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="szkolenie">
+ <div class="wrap dwie">
+  <figure><img src="img/wyklad-1400.webp" srcset="img/wyklad-800.webp 800w, img/wyklad-1400.webp 1400w" sizes="(max-width:900px) 100vw, 50vw" width="1400" height="1050" loading="lazy" alt="Sala pełna uczestniczek podczas szkolenia z bezpieczeństwa osobistego"></figure>
+  <div>
+   <h2>Co dostajesz na szkoleniu "Sama się obronię"</h2>
+   <ul class="lista">
+    <li><span class="strefa"><i></i></span><div><b>Świadomość zagrożeń</b><span class="t">Rozpoznajesz sygnały ostrzegawcze i omijasz niebezpieczne sytuacje, zanim się zaczną.</span></div></li>
+    <li><span class="strefa"><i></i></span><div><b>Panowanie nad stresem</b><span class="t">Wiesz, jak zareagować w kryzysie, żeby strach Cię nie sparaliżował.</span></div></li>
+    <li><span class="strefa"><i></i></span><div><b>Asertywność i granice</b><span class="t">Jasno mówisz, na co się nie zgadzasz, i umiesz tego bronić.</span></div></li>
+    <li><span class="strefa"><i></i></span><div><b>Techniki samoobrony</b><span class="t">Proste, skuteczne sposoby obrony, dopasowane do realnych zagrożeń, niezależnie od wieku i kondycji.</span></div></li>
+    <li><span class="strefa"><i></i></span><div><b>Ćwiczenia w realnych scenariuszach</b><span class="t">Sprawdzasz nową wiedzę w bezpiecznych warunkach, w grupie kobiet, które się wspierają.</span></div></li>
+   </ul>
+   <p class="dla">Dla każdej kobiety, bez względu na wiek. Dziewczyny 12-15 lat w obecności opiekuna, od 16 lat z pisemną zgodą.</p>
+  </div>
+ </div>
+</section>
+
+<section id="formy">
+ <div class="wrap">
+  <div class="naglowek"><div><h2>Wybierz formę szkolenia</h2><p>Szkolenia stacjonarne w całej Polsce i online. Na co dzień jestem w Trójmieście, dojeżdżam do grup i firm.</p></div></div>
+  <div class="formy">
+   <a class="forma szary" href="#terminy"><img src="img/sala-800.webp" width="800" height="533" loading="lazy" alt="Grażyna Ferra-Kopocińska tłumaczy technikę obrony uczestniczkom"><div><h3>Szkolenie otwarte</h3><p>Zapisujesz się na termin w swoim mieście i ćwiczysz w grupie kobiet.</p><span class="gdzie">Terminy i zapisy</span></div></a>
+   <a class="forma szary" href="#kontakt"><img src="img/konferencja-700.webp" width="700" height="1050" style="object-position:50% 70%" loading="lazy" alt="Grupa kobiet na sali podczas prelekcji"><div><h3>Grupa 2-50 osób</h3><p>Zbierz przyjaciółki, siostry, koleżanki z pracy. Przyjadę do Was albo poprowadzę zajęcia online.</p><span class="gdzie">Zapytaj o termin</span></div></a>
+   <a class="forma szary" href="#kontakt"><img src="img/strzelnica2-700.webp" width="700" height="933" style="object-position:50% 40%" loading="lazy" alt="Indywidualne zajęcia z instruktorką na strzelnicy"><div><h3>Szkolenie indywidualne</h3><p>Zajęcia 1:1 od podstaw po zaawansowane strategie, w Trójmieście, u Ciebie lub online. Pakiet VIP 2 840 zł.</p><span class="gdzie">Umów zajęcia</span></div></a>
+   <a class="forma szary" href="#kontakt"><img src="img/firma-700.webp" width="700" height="1050" style="object-position:50% 45%" loading="lazy" alt="Szkolenie dla zespołu w sali konferencyjnej firmy"><div><h3>Szkolenia dla firm</h3><p>Bezpieczeństwo osobiste, deeskalacja konfliktów, odporność psychiczna. Program pod branżę, cena indywidualnie.</p><span class="gdzie">Poproś o ofertę</span></div></a>
+  </div>
+ </div>
+</section>
+
+<section style="padding-top:0">
+ <div class="wrap">
+  <div class="naglowek"><div><h2>Z sali i ze strzelnicy</h2></div><div class="strzalki"><button type="button" data-pas="p-galeria" data-k="-1" aria-label="Poprzednie zdjęcia">&#8592;</button><button type="button" data-pas="p-galeria" data-k="1" aria-label="Następne zdjęcia">&#8594;</button></div></div>
+  <div class="galeria" id="p-galeria">
+   <img src="img/sala-800.webp" width="800" height="533" loading="lazy" alt="Ćwiczenia samoobrony na warsztatach">
+   <img src="img/strzelnica-700.webp" width="700" height="1050" loading="lazy" alt="Kurs strzelecki dla kobiet">
+   <img src="img/gaz-800.webp" width="800" height="600" loading="lazy" alt="Gazy pieprzowe omawiane na szkoleniu">
+   <img src="img/konferencja-700.webp" width="700" height="1050" loading="lazy" alt="Prelekcja dla kobiet">
+   <img src="img/wyklad-800.webp" width="800" height="600" loading="lazy" alt="Szkolenie w sali konferencyjnej">
+   <img src="img/strzelnica2-700.webp" width="700" height="933" loading="lazy" alt="Instruktorka na strzelnicy">
+   <img src="img/firma-700.webp" width="700" height="1050" loading="lazy" alt="Szkolenie firmowe">
+  </div>
+ </div>
+</section>
+
+<section class="szary">
+ <div class="wrap">
+  <div class="naglowek"><div><h2>Co mówią uczestniczki</h2><p>Komentarze z Instagrama po warsztatach "Sama się obronię".</p></div></div>
+  <div class="opinie">
+   <figure class="opinia"><blockquote>Najlepsze i najbardziej merytoryczne szkolenie, na jakim kiedykolwiek byłam. Uważam, że to pozycja obowiązkowa dla każdej kobiety.</blockquote><figcaption>jagoda_torbus_podcast</figcaption></figure>
+   <figure class="opinia"><blockquote>Gdybym mogła, wykupiłabym ten kurs dla wszystkich bliskich mi kobiet i ich córek. To jak kurs pierwszej pomocy.</blockquote><figcaption>zosia_rudnicka</figcaption></figure>
+   <figure class="opinia"><blockquote>Wyszłam z ogromną dawką wiedzy, jak unikać zagrożeń, na co zwracać uwagę, a także jak się bronić, gdyby doszło do jakiejś niebezpiecznej sytuacji.</blockquote><figcaption>pozagenowe_dna</figcaption></figure>
+  </div>
+ </div>
+</section>
+
+<section class="ciemna" id="o-mnie">
+ <div class="wrap omnie">
+  <figure><img src="img/grazyna-1000.webp" srcset="img/grazyna-600.webp 600w, img/grazyna-1000.webp 1000w" sizes="(max-width:900px) 90vw, 40vw" width="1000" height="1458" loading="lazy" alt="Grażyna Ferra-Kopocińska, instruktorka samoobrony"></figure>
+  <div>
+   <h2>Grażyna Ferra-Kopocińska</h2>
+   <p>Przez ponad 16 lat służby w mundurze zdobywałam doświadczenie, które dziś wykorzystuję, ucząc kobiety, jak zadbać o swoje bezpieczeństwo. Byłam funkcjonariuszem służby SCS i żołnierzem w Batalionie Dowodzenia Marynarki Wojennej.</p>
+   <p>Jako instruktorka technik interwencyjnych, samoobrony i wyszkolenia strzeleckiego szkoliłam tam, gdzie skuteczność oznaczała bezpieczeństwo własne i innych. Prowadzę też prelekcje na konferencjach i wydarzeniach dla kobiet.</p>
+   <p class="cytat">Bezpieczeństwo to nie tylko umiejętności fizyczne, ale przede wszystkim świadomość, przygotowanie i gotowość do działania.</p>
+   <p class="loga-t">Szkolenia i prelekcje prowadziłam m.in. dla:</p>
+   <div class="loga">
+    <img src="img/l-vattenfall.webp" width="832" height="180" loading="lazy" alt="Vattenfall">
+    <img src="img/l-lexis.webp" width="375" height="112" loading="lazy" alt="LexisNexis Risk Solutions">
+    <img src="img/l-era.webp" width="495" height="260" loading="lazy" alt="Era Nowych Kobiet">
+    <img src="img/l-bilgoraj.webp" width="225" height="225" loading="lazy" alt="Biłgorajska Rada Kobiet">
+   </div>
+  </div>
+ </div>
+</section>
+
+<section id="zestawy">
+ <div class="wrap">
+  <div class="naglowek"><div><h2>Zestawy bezpieczeństwa SAFE FAMILY</h2><p>Sprawdzone przedmioty na co dzień, dobrane dla kobiet, nastolatek, dzieci i seniorów. Zamawiasz w sklepie, płacisz online.</p></div></div>
+  <div class="produkty">
+   <article class="produkt"><img src="img/zestaw1-900.webp" srcset="img/zestaw1-500.webp 500w, img/zestaw1-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Pełny pakiet Bezpieczna Kobieta"><div><h3>FULL PAKIET "Bezpieczna Kobieta"</h3><p class="dop">Maksymalna ochrona, kiedy liczą się sekundy.</p><div class="dol"><b>324 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+   <article class="produkt"><img src="img/zestaw2-900.webp" srcset="img/zestaw2-500.webp 500w, img/zestaw2-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Zestaw Bezpieczna Kobieta z gazem pieprzowym"><div><h3>Zestaw "Bezpieczna Kobieta" z gazem pieprzowym</h3><p class="dop">Wersja z gazem pieprzowym.</p><div class="dol"><b>248 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+   <article class="produkt"><img src="img/zestaw6-900.webp" srcset="img/zestaw6-500.webp 500w, img/zestaw6-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Zestaw Bezpieczna Kobieta"><div><h3>Zestaw "Bezpieczna Kobieta"</h3><p class="dop">Podstawowy zestaw na co dzień.</p><div class="dol"><b>144 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+   <article class="produkt"><img src="img/zestaw4-900.webp" srcset="img/zestaw4-500.webp 500w, img/zestaw4-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Zestaw Bezpieczna Nastolatka"><div><h3>Zestaw "Bezpieczna Nastolatka"</h3><p class="dop">Praktyczne wsparcie bezpieczeństwa na co dzień.</p><div class="dol"><b>124 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+   <article class="produkt"><img src="img/zestaw5-900.webp" srcset="img/zestaw5-500.webp 500w, img/zestaw5-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Zestaw Bezpieczne Dziecko"><div><h3>Zestaw "Bezpieczne Dziecko"</h3><p class="dop">Bezpieczeństwo dziecka i spokój rodzica.</p><div class="dol"><b>98 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+   <article class="produkt"><img src="img/zestaw3-900.webp" srcset="img/zestaw3-500.webp 500w, img/zestaw3-900.webp 900w" sizes="(max-width:600px) 100vw, 33vw" width="900" height="900" loading="lazy" alt="Zestaw Bezpieczny Senior"><div><h3>Zestaw "Bezpieczny Senior"</h3><p class="dop">Wsparcie bezpieczeństwa na co dzień.</p><div class="dol"><b>124 zł</b><a class="btn" href="#zestawy">Do koszyka</a></div></div></article>
+  </div>
+ </div>
+</section>
+
+<section class="szary" id="online">
+ <div class="wrap oferta2">
+  <div>
+   <h2 style="margin-bottom:22px">Nauka online</h2>
+   <ul class="cennik">
+    <li><span>Kurs online "Budowa strategicznego bezpieczeństwa dla kobiet"</span><b><s>488 zł</s>244 zł</b></li>
+    <li><span>Szkolenie online "Bezpieczne dziecko na wakacjach"</span><b>88 zł</b></li>
+    <li><span>E-book "Zwiększ swoje bezpieczeństwo. Kobieca moc przetrwania"</span><b><s>44 zł</s>24 zł</b></li>
+   </ul>
+  </div>
+  <div>
+   <h2 style="margin-bottom:22px">Konsultacje i kurs strzelecki</h2>
+   <ul class="cennik">
+    <li><span>Konsultacja strategiczna 1:1</span><b>444 zł</b></li>
+    <li><span>Fundamenty świadomego dążenia do celu, 3 spotkania</span><b>1 240 zł</b></li>
+    <li><span>Strategiczne bezpieczeństwo, 5 spotkań</span><b>2 240 zł</b></li>
+    <li><span>Mentoring transformacyjny, 3 miesiące, 10 spotkań</span><b>4 840 zł</b></li>
+    <li><span>Kurs podstaw strzeleckich dla kobiet, Gdynia</span><b>680 zł</b></li>
+   </ul>
+  </div>
+ </div>
+</section>
+
+<section id="kontakt">
+ <div class="wrap kontakt">
+  <div>
+   <h2 style="margin-bottom:18px">Nie widzisz terminu dla siebie?</h2>
+   <p class="male">Napisz albo zadzwoń. Zorganizuję szkolenie dla Twojej grupy lub firmy, odpowiem też na pytania o samoobronę i warsztaty.</p>
+   <a class="kanal" href="tel:+48730048199">730 048 199</a>
+   <a class="kanal" href="mailto:kontakt@bezpieczna-kobieta.pl" style="font-size:clamp(17px,1.6vw,22px)">kontakt@bezpieczna-kobieta.pl</a>
+   <p class="male" style="margin-top:18px">Instagram: <a href="https://www.instagram.com/bezpiecznakobieta" rel="noopener">@bezpiecznakobieta</a></p>
+  </div>
+  <form onsubmit="event.preventDefault();this.querySelector('.uwaga').textContent='To podgląd strony - formularz zacznie wysyłać wiadomości na stronie docelowej.'">
+   <label>Imię<input name="imie" autocomplete="given-name"></label>
+   <label>E-mail lub telefon<input name="kontakt" autocomplete="email"></label>
+   <label>Czego dotyczy wiadomość<select name="temat"><option>Szkolenie otwarte</option><option>Szkolenie dla grupy</option><option>Szkolenie dla firmy</option><option>Zajęcia indywidualne</option><option>Prelekcja na konferencji</option><option>Inne pytanie</option></select></label>
+   <label>Wiadomość<textarea name="wiadomosc"></textarea></label>
+   <label class="zgoda"><input type="checkbox"> Zapisz mnie na newsletter</label>
+   <button class="btn" type="submit">Wyślij wiadomość</button>
+   <p class="uwaga"></p>
+  </form>
+ </div>
+</section>
+</main>
+
+<footer>
+ <div class="wrap">
+  <div class="stopka">
+   <div><h4>Bezpieczna Kobieta</h4><p>Akademia Bezpiecznych Kobiet<br>Grażyna Ferra-Kopocińska<br>szkolenia z samoobrony i bezpieczeństwa osobistego</p></div>
+   <div><h4>Szkolenia</h4><ul><li><a href="#terminy">Terminy</a></li><li><a href="#formy">Dla firm</a></li><li><a href="#online">Online</a></li><li><a href="#online">Kurs strzelecki</a></li></ul></div>
+   <div><h4>Sklep</h4><ul><li><a href="#zestawy">Zestawy SAFE FAMILY</a></li><li><a href="#">Regulamin</a></li><li><a href="#">Polityka prywatności</a></li><li><a href="#">Zwroty i reklamacje</a></li></ul></div>
+   <div><h4>Kontakt</h4><ul><li><a href="tel:+48730048199">730 048 199</a></li><li><a href="mailto:kontakt@bezpieczna-kobieta.pl">kontakt@bezpieczna-kobieta.pl</a></li><li><a href="https://www.instagram.com/bezpiecznakobieta" rel="noopener">Instagram</a></li><li><a href="https://www.facebook.com/profile.php?id=100089967696999" rel="noopener">Facebook</a></li></ul></div>
+  </div>
+  <div class="dolstopki"><span>&copy; 2026 Bezpieczna Kobieta</span><a class="wylinka-badge" href="https://wylinka.pl/?utm_source=bezpieczna-kobieta.pl&amp;utm_medium=stopka&amp;utm_campaign=wykonanie" rel="noopener" title="Strona wykonana przez Wylinka"><svg viewBox="0 0 64 64" aria-hidden="true" focusable="false" fill="currentColor"><path d="M9.8 22.8l-1.2-7.9 2.2-3.7 15.5 4.6-.5 1.5-7.2 5.5 4.7 15.6 5-15.6 7 0 4.1 12.7-4.2-.9-2.6 1.8-.8-2.2-5.3 15.6-4.3 0 .4 .2-2.1 2.8-1.3-1.1 1.1-1.4-3.1 .2-.1-1.7 2.2-.1-5.7-16.5-4.8 .6-.8 3.1 0 .5-.3 .5 .8 2.2-1.6 .5-.4-1.3-.8 1.6-1.5-.8 .8-1.6-1.4 .6-.6-1.6 2.3-.8 .2-.4 1.3-4.8 5.9-.8-2.4-6.9zM15.2 13.7l-.1-.4-.4 .8-.1 .8 .1 1 .1 .4 .3 .7 .3-.9 .1-.7 0-.8z"/><path class="wy-pod" d="M37.1 49.8l-4.5-13.3 2.6-1.8 4.2 .9 .9 2.8 3-9.7 0-.5 .1-.8 3.2-8.4 .5-1 .6-1 .9-1.1 1.3-1 1.1-.7 1.4-.5 1.4-.3 .7 0 .9 0 1.2 .3 1.4 .6 .8 .5 .7 .7 .6 .7 .5 .9 .3 .9 .1 .9 0 .8-.2 .9-.5 .9-.5 .6-.7 .5-.7 .3-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.6-.1-.6-.3-.7-.4-.5-.4-.4-.5-.3-.6-.3-.7 0-.7 .1-.6 .1-.5 .4-.5 .5-.3 .5-.2 .7-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1-2.1-2.8 .4-.2z"/><path class="wy-old" d="M40.8 50l.4-.2-4.1 0-4.2-12.5 2.5-1.7 4.3 .9 .6 1.9 .6-1.6 0-.3 2.4-7.8 0-.5 .1-.8 3.2-8.4 .4-.8 .6-.9 .9-1.2 .9-.9 1.3-.8 1.4-.6 1.2-.3 1.4-.1 1.3 .1 .6 .2 .8 .3 1.1 .6 .9 .7 .7 .9 .5 .9 .3 .9 .1 1.1-.1 .9-.3 .9-.4 .7-.6 .7-.6 .4-.6 .2-.1-.1 0-.1 .5-.5 .3-.7 .2-.5 0-.5-.1-.6-.2-.6-.3-.5-.4-.5-.5-.3-.6-.3-.7-.1-.6 0-.6 .1-.6 .3-.6 .5-.3 .4-.2 .5-.1 .5-.1 1.5-1.4 5.1-.8 3.3-.3 .7-.5 .7-6 17.5 1.9 .1-.1 1.7-3.1-.2 1.1 1.4-1.3 1.1zM49.6 17.1l.6 1.7-1.5 1.9 .4 .4 1.8-2.1-.7-2.1zM48.1 28.3l.5 1.8-1.7 1.8 .4 .4 1.9-2-.6-2.2zM37.9 41.7l1.7-1.5-.4-.4-1.7 1.4zM42.6 38.7l-1.5 2.8 1.1 2-1.3 2.6 .5 .2 1.5-2.8-1.1-2 1.4-2.5z"/></svg><span>wykonanie: <b>Wylinka</b></span></a>
+</div>
+ </div>
+</footer>
+
+<div class="mob" id="mob"><a class="btn jasny" href="tel:+48730048199">Zadzwoń</a><a class="btn" href="#terminy">Terminy</a></div>
+
+<script>
+(function(){
+ var b=document.querySelector('.burger'),p=document.getElementById('panel');
+ b.addEventListener('click',function(){var o=p.classList.toggle('otw');b.setAttribute('aria-expanded',o)});
+ p.addEventListener('click',function(e){if(e.target.tagName==='A'){p.classList.remove('otw');b.setAttribute('aria-expanded','false')}});
+ // przesuwanie myszą
+ document.querySelectorAll('.pas,.galeria').forEach(function(el){
+  var x0,s0,ruch=false,wcis=false;
+  el.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;wcis=true;ruch=false;x0=e.clientX;s0=el.scrollLeft});
+  window.addEventListener('pointermove',function(e){if(!wcis)return;var d=e.clientX-x0;if(Math.abs(d)>5){ruch=true;el.classList.add('ciag')}if(ruch)el.scrollLeft=s0-d});
+  window.addEventListener('pointerup',function(){if(!wcis)return;wcis=false;el.classList.remove('ciag')});
+  el.addEventListener('click',function(e){if(ruch){e.preventDefault();e.stopPropagation();ruch=false}},true);
+  el.addEventListener('dragstart',function(e){e.preventDefault()});
+ });
+ document.querySelectorAll('.strzalki button').forEach(function(bt){bt.addEventListener('click',function(){var el=document.getElementById(bt.dataset.pas);el.scrollBy({left:bt.dataset.k*el.clientWidth*.8,behavior:'smooth'})})});
+ var m=document.getElementById('mob'),h=document.querySelector('.hero .btn');
+ if('IntersectionObserver' in window){new IntersectionObserver(function(en){m.classList.toggle('widac',!en[0].isIntersecting&&en[0].boundingClientRect.top<0)}).observe(h)}
+})();
+</script>
+</body>
+</html>
